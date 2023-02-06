@@ -13,5 +13,7 @@ export class DisplayComponent implements OnInit {
   ngOnInit() {
     this.userservice.newSource.subscribe(val =>this.data=val);
   }
- 
+  deleteItemOnClick(index:number){
+    this.data.splice(index,1)
+  }
 }
